@@ -17,6 +17,10 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
     .catch(err => console.error(err));
 
 // Routes
+
+app.get("/", (req, res) => {
+    res.send("welcome ")
+})
 app.use('/api/campaigns', campaignRoutes);
 
 // Server Start
